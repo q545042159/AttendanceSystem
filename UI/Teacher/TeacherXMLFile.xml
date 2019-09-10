@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteRoot id="root" url="" title="导航菜单" description="">
+  <siteMapNode url="" title="信息上报" description="">
+    <siteMapSubNode url="" title="录入考勤" description=""/>
+    <siteMapSubNode url="" title="历史记录" description=""/>
+  </siteMapNode>
+</siteRoot>

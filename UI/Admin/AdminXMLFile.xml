@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteRoot id="root" url="" title="导航菜单" description="">
+
+  <siteMapNode url="" title="系统设置" description="">
+    <siteMapSubNode url="~/Admin/用户管理.aspx" title="用户管理" description=""/>
+    <siteMapSubNode url="~/Admin/数据管理.aspx" title="数据管理" description=""/>
+    <siteMapSubNode url="~/Admin/新增用户.aspx" title="新增用户" description=""/>
+    <siteMapSubNode url="~/Admin/发布通知.aspx" title="发布通知" description=""/>
+  </siteMapNode>
+
+  <siteMapNode url="" title="数据管理" description="">
+    <siteMapSubNode url="~/Admin/导入数据.aspx" title="导入数据" description=""/>
+    <siteMapSubNode url="~/Admin/DeleteAllData.aspx" title="清空数据" description=""/>
+    <siteMapSubNode url="~/Admin/ToDataBase.aspx" title="导出数据" description=""/>
+  </siteMapNode>
+
+  <siteMapNode url="" title="异动处理" description="">
+    <siteMapSubNode url="~/Admin/ModifyStudentAttendance.aspx" title="学生缺勤" description=""/>
+    <siteMapSubNode url="~/Admin/ModifyStudentAttendance.aspx" title="学生作业" description=""/>
+    <siteMapSubNode url="~/Admin/ModifyTeacherAttendance.aspx" title="教师数据" description=""/>
+    <siteMapSubNode url="~/Admin/ModifyTeacherHomeworkAttendance.aspx" title="退休学处理" description=""/>
+    
+  </siteMapNode>
+
+  <siteMapNode url="" title="数据分析" description="">
+    <siteMapSubNode url="~/Admin/OtherByTeacherAttendanceCount.aspx" title="学生数据汇总" description=""/>
+    <siteMapSubNode url="~/Admin/OtherByStudentAttendanceCount.aspx" title="教师数据汇总" description=""/>
+    <siteMapSubNode url="~/Admin/OtherByTeacherHomeworkAttendanceCount.aspx" title="学生数据分析图" description=""/>
+    <siteMapSubNode url="~/Admin/OtherByTeacherHomeworkAttendanceCount.aspx" title="教师数据分析图" description=""/>
+  </siteMapNode>
+
+  <siteMapNode url="" title="数据统计" description="">
+    <siteMapSubNode url="~/Admin/AdminSubmitAttendance.aspx" title="教师情况" description=""/>
+    <siteMapSubNode url="~/Admin/AdminSubmitAttendance.aspx" title="学生情况" description=""/>
+  </siteMapNode>
+
+  <siteMapNode url="" title="信息上报" description="">
+    <siteMapSubNode url="~/Admin/录入考勤.aspx" title="录入考勤" description=""/>
+    <siteMapSubNode url="~/Admin/AdminSubmitAttendance.aspx" title="历史记录" description=""/>
+    <siteMapSubNode url="~/Admin/AdminSubmitAttendance.aspx" title="教师成果" description=""/>
+  </siteMapNode>
+
+</siteRoot>

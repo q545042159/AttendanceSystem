@@ -1,0 +1,311 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TeacherMasterPage.master.cs" Inherits="Teacher_TeacherMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+       body
+        {
+            margin:0px;
+            padding:0px;
+            }
+        #main
+        {
+            width:100%;
+            background-color:#686868;
+        }
+        .btn
+        {
+            cursor:pointer;
+            }
+         #topbtn2:hover,#topbtn1:hover
+        {
+            color:Red;
+            }
+        #top{
+            width:100%;
+            height:60px; 
+            background-color:#15222a;
+	        }
+	    #top p
+	    {
+	        float:left;
+	        font-size:22px;
+	        font-weight:bold; 
+	        color:White;
+	        margin-top:10px;
+	        }
+        #topbtn2,#topbtn1,#toplbl3,#toplbl2,#toplbl1,#lblcount
+        {
+            float:right;
+            padding:0;
+            font-size:16px;
+            font-weight:bold;
+            margin-top:10px;
+            margin-left:10px;
+            color:White;
+        }
+        #topbtn2,#topbtn1
+        {   
+            background-color:transparent;
+            border:0px;
+            }
+        marquee
+        {
+            margin-top:-20px;
+            }
+        #Label1
+        {
+            margin-left:100px;
+            font-size:16px;
+            color:white;
+            }
+       #content
+        {
+            width:100%;
+            height:834px;
+            min-width:1600px;
+            margin:2px 0px 2px;
+            }
+        #left
+        {
+            width:11%;
+            height:100%;
+            float:left;
+            min-width:160px;
+            border:1px solid black;
+            border-right:1px solid #f5d1d1;
+            background-image:url(../loginimages/网页搭建/left2.jpg);
+            background-size:100% 100%;
+            }
+        #lefttop
+        {
+            margin:0 auto;
+            width:100%;
+            height:90px;
+            background-color:rgba(0,0,0,0.6);
+            text-align:center;
+            }
+        #lefttop #ImageButton1
+        {
+            width:90px;
+            height:90px;
+            border-radius:50%;
+            box-shadow:0 0 2px 2px white;
+            }
+        #leftbottom
+        {
+            width:100%;
+            height:742px;
+            background-color:rgba(0,0,0,0.8);
+            }
+        #right
+        {
+            width:88%;
+            height:100%;
+            float:left;
+            margin-left:5px;
+            margin-right:5px;
+            min-width:500px;
+            position:relative;
+            border:1px solid white;
+            }
+        #rightmiddle
+        {
+            position:absolute;
+            width:99%;
+            height:25px;
+            background-color:rgba(0,0,0,0.2);
+            color:white;
+            margin-top:5px;
+            margin-left:6px;
+            border:1px solid white;
+            }
+        #rightbottom
+        {
+            background-image:url(../loginimages/背景图/bgimg4.jpg);
+            background-repeat:no-repeat;
+            background-size:100% 100%;
+            position:absolute;
+            width:99%;
+            height:794px;
+            float:left;
+            background-color:white;
+            margin-top:37px;
+            margin-left:6px;
+            border:1px solid white;
+            }
+        #modifypwd,#insert,#delete,#select,#modify
+        {
+            border:none;
+            background-color:transparent;
+            font-size:16px;
+            font-weight:bold;
+            color:white;
+            }
+        #foot
+        {
+            width:100%;
+            height:20px;
+            background-color:#383c47;
+            }
+        a
+        {
+            text-decoration:none;
+            }
+
+
+     /*侧边栏*/
+dl{
+	margin:0px;
+	padding:0px;
+	width:100%;
+	height:100%;
+	text-align:left;
+	}
+dl dt{
+	border-bottom:1px solid #f0eef0;
+	line-height:2.2;
+	color:white;
+	}
+dl dd div{
+	line-height:2.2;
+	margin-left:8px;
+	margin-right:8px;
+	border-bottom:1px solid #f0eef0;
+	}
+dl dt:hover,dl dd div:hover{
+	background-color:#cdad98;}
+#daohang{
+	background-color:orange;
+	color:white;}
+#daohang:hover{
+	background-color:orange;
+	}
+dl dt span
+{
+    margin-left:-20px;
+	}
+dl dd
+{
+	margin-left:0px;
+    background-color:rgba(255,255,255,0.75);
+}
+dl dd div a{
+    display:block;
+    width:100%;
+    height:100%;
+	text-decoration:none;
+	color:black;
+	margin-left:50px;
+    }
+.imgleft1
+{
+    float:left;
+    margin-top:5px;
+    margin-left:10px;
+    margin-right:12px;
+    }
+.imgleft
+{
+    float:left;
+    margin-top:5px;
+    margin-left:10px;
+    margin-right:30px;
+    }
+.childimgleft
+{
+    float:left;
+    margin-top:5px;
+    margin-left:20px;
+    margin-right:-35px;
+    }
+.parent-img
+{
+    float:right;
+    margin-top:10px;
+    margin-right:10px;
+    }
+.mousedown{
+	background-color:yellow;}
+   </style>
+    <script type="text/javascript" src="../loginimages/script/jquery-3.2.1.min.js"></script>
+       <script type="text/javascript">
+           $(document).ready(function () {
+               $("dd").hide();
+               $("dt[id!='daohang'],dl dd div").css("cursor", "pointer");
+               $("dt[id!='daohang']").each(function (index) {
+                   $("dt[id!='daohang']:eq(" + index + ")").click(function () {
+                       if ($("dt[id!='daohang']:eq(" + index + ")").next().is(":hidden")) {
+                           $("dt[id!='daohang']:eq(" + index + ")").next().slideDown(800);
+                           $("dt[id!='daohang']:eq(" + index + ") .parent-img").attr("src", "../loginimages/小图标/open.png");
+                           $("dt[id!='daohang']:not(:eq(" + index + "))").next().slideUp(800);
+                           $("dt[id!='daohang']:not(:eq(" + index + ")) .parent-img").attr("src", "../loginimages/小图标/off.png");
+                       }
+                       else {
+                           $("dt[id!='daohang']:eq(" + index + ")").next().slideUp(800);
+                           $("dt[id!='daohang']:eq(" + index + ") .parent-img").attr("src", "../loginimages/小图标/off.png");
+                       }
+                   });
+               });
+               $("div").each(function (index) {
+                   $("div:eq(" + index + ")").on("click", function () {
+                       $("div:eq(" + index + ")").addClass("mousedown");
+                       $("div:not(:eq(" + index + "))").removeClass("mousedown");
+                   });
+               });
+           });
+</script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <div id="main">
+        <div id="top">
+            <p><asp>山东商务职业学院考勤管理系统 </p>
+            <asp:Button ID="topbtn2" runat="server" Text="btn2" CssClass="btn" Font-Underline="True"
+                onclick="topbtn2_Click1"/>
+            <asp:Button ID="topbtn1" runat="server" Text="btn1" CssClass="btn" Font-Underline="True"
+                onclick="topbtn1_Click1" />
+            <asp:Label ID="toplbl3" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="toplbl2" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="toplbl1" runat="server" Text="欢迎"></asp:Label>
+            <asp:Label ID="lblcount" runat="server" Text="第几周"></asp:Label>
+        </div>
+            <marquee direction="right" scrollamount="6" onMouseOver=this.stop() onMouseOut=this.start()><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></marquee>
+        <div id="content">
+           
+        <div id="left">
+            <div id="lefttop">
+                <asp:ImageButton ID="ImageButton1" runat="server" 
+                    onclick="ImageButton1_Click1" />
+            </div>
+            <div id="leftbottom">
+                  <dl>
+    	<dt id="daohang"><img class="imgleft1" src="../loginimages/小图标/menu.png" />导航菜单</dt>
+		
+        <dt><img class="imgleft" src="../loginimages/小图标/shangbao.png" /><span>信息上报</span><img class="parent-img" src="../loginimages/小图标/off.png" /></dt>
+        <dd>
+        	<div><img class="childimgleft" src="../loginimages/小图标/kaoqin.png" /><a href="录入考勤.aspx">录入考勤</a></div>
+            <div><img class="childimgleft" src="../loginimages/小图标/history.png" /><a>历史记录</a></div>
+        </dd>
+	</dl>
+        </div>
+    </div>
+            <div id="right">     
+
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" Visible="True">  
+                   
+                </asp:ContentPlaceHolder>
+
+            </div>
+            </div>
+        <div id="foot"></div>
+    </div>
+    
+    </form>
+</body>
+</html>
